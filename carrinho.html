@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carrinho de Compras</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <style>
+    
+
+    /* Sidebar */
+    .sidebar {
+      width: 60px;
+      height: 100vh;
+      background-color: #413812;
+      padding: 20px 0;
+      color: #fff;
+      overflow: hidden;
+      border-radius: 5px 0 0 5px;
+      transition: width 0.75s ease;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+
+    .sidebar:hover {
+      width: 200px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin: 20px 0;
+    }
+
+    .sidebar ul li a {
+      display: flex;
+      align-items: center;
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      transition: background 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 4px;
+    }
+
+    .sidebar ul li a i {
+      min-width: 40px;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .sidebar ul li a span {
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .sidebar:hover ul li a span {
+      opacity: 1;
+      margin-left: 10px;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    main {
+      flex: 1;
+      padding: 2rem 2rem 2rem 80px;
+      background: #f7f9fa;
+      min-height: 100vh;
+    }
+
+     .sidebar:hover ~ main {
+      margin-left: 200px;
+    }
+
+
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+
+    .tabela-carrinho {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      
+    }
+
+    .tabela-carrinho th, .tabela-carrinho td {
+      padding: 1rem;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+    }
+
+    .tabela-carrinho th {
+      background-color: #f1f1f1;
+      font-weight: bold;
+      color: #444;
+    }
+
+    .tabela-carrinho td button {
+      background-color: #e53935;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .tabela-carrinho td button:hover {
+      background-color: #c62828;
+    }
+
+    #total-final {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+      color: #2e7d32;
+      text-align: right;
+    }
+
+    footer {
+      margin-top: 2rem;
+      text-align: center;
+      color: #888;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <ul>
+        <li><a href="home.html"><i class="fas fa-home"></i><span>Home</span></a></li>
+        <li><a href="carrinho.html"><i class="fas fa-shopping-cart"></i><span>Carrinho</span></a></li>
+        <li><a href="pagamento.html"><i class="fas fa-credit-card"></i><span>Pagamento</span></a></li>
+
+      </ul>
+    </div>
+
+    <main>
+      <header>
+        <h1>Seu Carrinho de Compras</h1>
+      </header>
+
+      <section>
+        <table class="tabela-carrinho">
+          <thead>
+            <tr>
+              <th>Produto</th>
+              <th>Preço (R$)</th>
+              <th>Quantidade</th>
+              <th>Total (R$)</th>
+              <th>Ação</th>
+            </tr>
+          </thead>
+          <tbody id="corpo-tabela">
+            <!-- Itens do carrinho aparecem aqui -->
+          </tbody>
+        </table>
+
+        <h3 id="total-final">Total: R$ 0,00</h3>
+      </section>
+
+      <footer>
+        <p>&copy; 2025 404 Not Found Store. Todos os direitos reservados.</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="js/carrinho.js"></script>
+</body>
+</html>

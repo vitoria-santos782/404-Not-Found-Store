@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Produtos - 404 Not Found Store</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    .sidebar {
+      width: 60px;
+      height: 100vh;
+      background-color: #413812;
+      padding: 20px 0;
+      color: #fff;
+      overflow: hidden;
+      border-radius: 5px 0 0 5px;
+      transition: width 0.75s ease;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+
+    .sidebar:hover {
+      width: 200px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin: 20px 0;
+    }
+
+    .sidebar ul li a {
+      display: flex;
+      align-items: center;
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      transition: background 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 4px;
+    }
+
+    .sidebar ul li a i {
+      min-width: 40px;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .sidebar ul li a span {
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .sidebar:hover ul li a span {
+      opacity: 1;
+      margin-left: 10px;
+    }
+
+    main {
+      flex: 1;
+      margin-left: 60px;
+      padding: 2rem;
+      transition: margin-left 0.75s ease;
+    }
+
+    .sidebar:hover ~ main {
+      margin-left: 200px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .produtos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .produto {
+      background: white;
+      padding: 15px;
+      width: 250px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .produto img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+
+    .produto button {
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #1877f2;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      width: 100%;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .produto button:hover {
+      background-color: #0d47a1;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      color: #888;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <ul>
+        <li><a href="home.html"><i class="fas fa-home"></i><span>Home</span></a></li>
+        <li><a href="produtos.html"><i class="fas fa-briefcase"></i><span>Produtos</span></a></li>
+        <li><a href="cadastro.html"><i class="fas fa-user"></i><span>Login</span></a></li>
+        <li><a href="carrinho.html"><i class="fas fa-shopping-cart"></i><span>Carrinho</span></a></li>
+        <li><a href="pagamento.html"><i class="fas fa-credit-card"></i><span>Pagamento</span></a></li>
+      </ul>
+    </div>
+
+    <main>
+      <h1>Todos os Produtos</h1>
+      <div class="produtos">
+        <div class="produto">
+          <img src="img/Console remoto Playstation.jpg" alt="Produto 1" />
+          <h3>Console remoto Playstation Portal para Playstation 5 cor branca</h3>
+          <p>R$ 1.339</p>
+          <button onclick="adicionarCarrinho('Produto 1', 1.339)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto">
+          <img src="img/8 Grip Extensor Analógicos.jpg" alt="Produto 2" />
+          <h3>8 Grip Extensor Analógicos Controle Ps3 Ps4 Ps5 Xbox One 360</h3>
+          <p>R$ 19,90</p>
+          <button onclick="adicionarCarrinho('Produto 2', 19.90)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto">
+          <img src="img/Monitor Led 23,8 Acer.jpg" alt="Produto 3" />
+          <h3>Monitor Led 23,8 Acer Sa240y Fhd Hdmi Vga SA240Y B</h3>
+          <p>R$ 659</p>
+          <button onclick="adicionarCarrinho('Produto 3', 659)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto">
+          <img src="img/Gabinete Gamer.webp" alt="Produto 4" />
+          <h3>Gabinete Gamer Mancer Cv100, Mid-tower, Lat De Vidro Preto</h3>
+          <p>R$ 189,90</p>
+          <button onclick="adicionarCarrinho('Produto 4', 189.90)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto">
+          <img src="img/Cadeira Gamer.jpg" alt="Produto 3" />
+          <h3>Cadeira Gamer Profissional Reclinável Apoio De Pés Cinza</h3>
+          <p>R$ 772,90</p>
+          <button onclick="adicionarCarrinho('Produto 3', 199.90)">Adicionar ao Carrinho</button>
+        </div><div class="produto">
+          <img src="img/Nintendo Switch.jpg" alt="Produto 3" />
+          <h3>Nintendo Switch 32gb Commario Kart 8 Deluxe</h3>
+          <p>R$ 2.199,90</p>
+          <button onclick="adicionarCarrinho('Produto 3', 199.90)">Adicionar ao Carrinho</button>
+        </div><div class="produto">
+          <img src="img/Kit Iluminação Profissional.webp" alt="Produto 3" />
+          <h3>Kit Iluminação Profissional Para Foto E Vídeo, Softbox Duplo 60w, Luz Quente E Fria Variável, Controle, Suporte Fundo Infinito, Tripés, Bolsa, Fundo Branco E Verde Chroma-key, Ideal Para Estúdio.</h3>
+          <p>R$ 1.199,90</p>
+          <button onclick="adicionarCarrinho('Produto 3', 199.90)">Adicionar ao Carrinho</button>
+        </div><div class="produto">
+          <img src="img/The Legend of Zelda.jpg" alt="Produto 3" />
+          <h3>The Legend of Zelda: Breath of the Wild Standard Edition Nintendo Switch Switch Físico</h3>
+          <p>R$ 309,90</p>
+          <button onclick="adicionarCarrinho('Produto 3', 309.90)">Adicionar ao Carrinho</button>
+        </div><div class="produto">
+          <img src="imagens/produto3.jpg" alt="Produto 3" />
+          <h3>Produto </h3>
+          <p>R$ 199,90</p>
+          <button onclick="adicionarCarrinho('Produto 3', 199.90)">Adicionar ao Carrinho</button>
+        </div><div class="produto">
+          <img src="imagens/produto3.jpg" alt="Produto 3" />
+          <h3>Produto </h3>
+          <p>R$ 199,90</p>
+          <button onclick="adicionarCarrinho('Produto 3', 199.90)">Adicionar ao Carrinho</button>
+        </div><div class="produto">
+          <img src="imagens/produto3.jpg" alt="Produto 3" />
+          <h3>Produto </h3>
+          <p>R$ 199,90</p>
+          <button onclick="adicionarCarrinho('Produto 3', 199.90)">Adicionar ao Carrinho</button>
+        </div><div class="produto">
+          <img src="imagens/produto3.jpg" alt="Produto 3" />
+          <h3>Produto </h3>
+          <p>R$ 199,90</p>
+          <button onclick="adicionarCarrinho('Produto 3', 199.90)">Adicionar ao Carrinho</button>
+        </div><div class="produto">
+          <img src="imagens/produto3.jpg" alt="Produto 3" />
+          <h3>Produto </h3>
+          <p>R$ 199,90</p>
+          <button onclick="adicionarCarrinho('Produto 3', 199.90)">Adicionar ao Carrinho</button>
+        </div><div class="produto">
+          <img src="imagens/produto3.jpg" alt="Produto 3" />
+          <h3>Produto </h3>
+          <p>R$ 199,90</p>
+          <button onclick="adicionarCarrinho('Produto 3', 199.90)">Adicionar ao Carrinho</button>
+        </div><div class="produto">
+          <img src="imagens/produto3.jpg" alt="Produto 3" />
+          <h3>Produto </h3>
+          <p>R$ 199,90</p>
+          <button onclick="adicionarCarrinho('Produto 3', 199.90)">Adicionar ao Carrinho</button>
+        </div><div class="produto">
+          <img src="imagens/produto3.jpg" alt="Produto 3" />
+          <h3>Produto </h3>
+          <p>R$ 199,90</p>
+          <button onclick="adicionarCarrinho('Produto 3', 199.90)">Adicionar ao Carrinho</button>
+        </div><div class="produto">
+          <img src="imagens/produto3.jpg" alt="Produto 3" />
+          <h3>Produto </h3>
+          <p>R$ 199,90</p>
+          <button onclick="adicionarCarrinho('Produto 3', 199.90)">Adicionar ao Carrinho</button>
+        </div><div class="produto">
+          <img src="imagens/produto3.jpg" alt="Produto 3" />
+          <h3>Produto </h3>
+          <p>R$ 199,90</p>
+          <button onclick="adicionarCarrinho('Produto 3', 199.90)">Adicionar ao Carrinho</button>
+        </div><div class="produto">
+          <img src="imagens/produto3.jpg" alt="Produto 3" />
+          <h3>Produto </h3>
+          <p>R$ 199,90</p>
+          <button onclick="adicionarCarrinho('Produto 3', 199.90)">Adicionar ao Carrinho</button>
+        </div><div class="produto">
+          <img src="imagens/produto3.jpg" alt="Produto 3" />
+          <h3>Produto </h3>
+          <p>R$ 199,90</p>
+          <button onclick="adicionarCarrinho('Produto 3', 199.90)">Adicionar ao Carrinho</button>
+        </div><div class="produto">
+          <img src="imagens/produto3.jpg" alt="Produto 3" />
+          <h3>Produto </h3>
+          <p>R$ 199,90</p>
+          <button onclick="adicionarCarrinho('Produto 3', 199.90)">Adicionar ao Carrinho</button>
+        </div><div class="produto">
+          <img src="imagens/produto3.jpg" alt="Produto 3" />
+          <h3>Produto </h3>
+          <p>R$ 199,90</p>
+          <button onclick="adicionarCarrinho('Produto 3', 199.90)">Adicionar ao Carrinho</button>
+        </div><div class="produto">
+          <img src="imagens/produto3.jpg" alt="Produto 3" />
+          <h3>Produto </h3>
+          <p>R$ 199,90</p>
+          <button onclick="adicionarCarrinho('Produto 3', 199.90)">Adicionar ao Carrinho</button>
+        </div><div class="produto">
+          <img src="imagens/produto3.jpg" alt="Produto 3" />
+          <h3>Produto </h3>
+          <p>R$ 199,90</p>
+          <button onclick="adicionarCarrinho('Produto 3', 199.90)">Adicionar ao Carrinho</button>
+        </div><div class="produto">
+          <img src="imagens/produto3.jpg" alt="Produto 3" />
+          <h3>Produto </h3>
+          <p>R$ 199,90</p>
+          <button onclick="adicionarCarrinho('Produto 3', 199.90)">Adicionar ao Carrinho</button>
+        </div><div class="produto">
+          <img src="imagens/produto3.jpg" alt="Produto 3" />
+          <h3>Produto </h3>
+          <p>R$ 199,90</p>
+          <button onclick="adicionarCarrinho('Produto 3', 199.90)">Adicionar ao Carrinho</button>
+        </div><div class="produto">
+          <img src="imagens/produto3.jpg" alt="Produto 3" />
+          <h3>Produto </h3>
+          <p>R$ 199,90</p>
+          <button onclick="adicionarCarrinho('Produto 3', 199.90)">Adicionar ao Carrinho</button>
+        </div><div class="produto">
+          <img src="imagens/produto3.jpg" alt="Produto 3" />
+          <h3>Produto </h3>
+          <p>R$ 199,90</p>
+          <button onclick="adicionarCarrinho('Produto 3', 199.90)">Adicionar ao Carrinho</button>
+        </div>
+      </div>
+      <footer>&copy; 2025 404 Not Found Store</footer>
+    </main>
+  </div>
+
+  <script>
+    function adicionarCarrinho(nome, preco) {
+      alert(`${nome} adicionado ao carrinho!`);
+      // Aqui você pode usar localStorage para adicionar de fato o produto
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 Not Found Store</title>
+
+  <!-- Font Awesome para ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- CSS interno -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #cfd8dc;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 60px;
+      height: 100vh;
+      background-color: #413812;
+      padding: 20px 0;
+      color: #fff;
+      overflow: hidden;
+      border-radius: 5px 0 0 5px;
+      transition: width 0.75s ease;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+
+    .sidebar:hover {
+      width: 200px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin: 20px 0;
+    }
+
+    .sidebar ul li a {
+      display: flex;
+      align-items: center;
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      transition: background 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 4px;
+    }
+
+    .sidebar ul li a i {
+      min-width: 40px;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .sidebar ul li a span {
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .sidebar:hover ul li a span {
+      opacity: 1;
+      margin-left: 10px;
+    }
+
+    /* Conteúdo principal */
+    main {
+      margin-left: 60px;
+      padding: 20px;
+      flex: 1;
+      transition: margin-left 0.75s ease;
+    }
+
+    .sidebar:hover ~ main {
+      margin-left: 200px;
+    }
+
+    header, footer {
+      background-color: #413812;
+      color: white;
+      text-align: center;
+      padding: 2em;
+    }
+
+    .produtos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .produto {
+      background: white;
+      padding: 10px;
+      border: 1px solid #ccc;
+      width: 30%;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    }
+
+    img {
+      width: 50%;
+      height: fit-content;
+    }
+
+    video, audio {
+      width: 25%;
+      margin-top: 10px;
+    }
+
+    .produto button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #1877f2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.3s ease;
+}
+
+.produto button:hover {
+  background-color: #0d47a1;
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <ul>
+        <li><a href="home.html"><i class="fas fa-home"></i><span>Início</span></a></li>
+        <li><a href="produtos.html"><i class="fas fa-briefcase"></i><span>Produtos</span></a></li>
+        <li><a href="carrinho.html"><i class="fas fa-shopping-cart"></i><span>Carrinho</span></a></li>
+        <li><a href="cadastro.html"><i class="fas fa-user"></i></span>login</a></li>
+      </ul>
+    </div>
+
+    <!-- Conteúdo principal -->
+   
+<main>
+  <header style="display: flex; justify-content: center; align-items: center; background-color: #413812; padding: 1em;">
+    <img src="img/a-logo-design-featuring-a-stylized-wordm_C9-pZR8TQ0OY--VQEAN6TQ_2sf_mXYhRM2tNRQWbih8MQ-Photoroom.png" alt="404 Not Found Store" style="max-height: 80px;">
+  </header>
+
+  <!-- Barra de pesquisa -->
+  <div style="margin: 20px 0; text-align: center;">
+    <input 
+      type="text" 
+      id="barra-pesquisa" 
+      placeholder="Buscar produtos..." 
+      style="padding: 8px; width: 60%; max-width: 400px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px;"
+      oninput="filtrarProdutos()"
+    />
+    <button 
+      onclick="filtrarProdutos()" 
+      style="padding: 9px 15px; margin-left: 10px; background-color: #1877f2; color: white; border: none; border-radius: 4px; cursor: pointer;"
+    >
+      <i class="fas fa-search"></i>
+    </button>
+  </div>
+
+  <h2>Produtos em destaque</h2>
+  <div class="produtos" id="lista-produtos">
+    <!-- seus produtos aqui -->
+  </div>
+
+
+
+<div class="produtos">
+  <div class="produto">
+    <h3></h3>
+    <img src="img/Notebook Gamer Acer Predator.jpg" alt="Notebook Gamer Acer Predator Helios Intel Core i7 1TB SSD 32GB RAM 16 240Hz NVIDIA RTX 4070 8GB Windows 11 PH16-72-72JA">
+    <p>Notebook Gamer Acer Predator Helios Intel Core i7 1TB SSD 32GB RAM 16" 240Hz NVIDIA RTX 4070 8GB Windows 11 PH16-72-72JA</p>
+    <p><strong>R$ 18.999,00</strong></p>
+    <button onclick="adicionarCarrinho('Produto 1', 99.90)">Adicionar ao Carrinho</button>
+  </div>
+
+  <div class="produto">
+    <h3></h3>
+    <img src="img/placa de video.webp" alt="Produto 2">
+    <p>Placa de vídeo Nvidia Galax EX Plus GeForce GTX 16 Series GTX 1650 65SQL8DS93E1 4GB</p>
+    <p><strong>R$ 1.127,90</strong></p>
+    <button onclick="adicionarCarrinho('Produto 2', 149.90)">Adicionar ao Carrinho</button>
+  </div>
+
+  <div class="produto">
+    <h3></h3>
+    <img src="img/ps5 pro.webp" alt="Produto 3">
+    <p>PlayStation 5 Pro PlayStation 5 Pro Sony 20243</p>
+    <p><strong>R$ 5.950</strong></p>
+    <button onclick="adicionarCarrinho('Produto 3', 199.90)">Adicionar ao Carrinho</button>
+  </div>
+
+  <div class="produto">
+    <img src="img/camiseta1.jpg" alt="Produto 4">
+    <p>Programador PC computador desenvolvedor de odificação presente t-shirt</p>
+    <p><strong>R$ 29,90</strong></p>
+    <button onclick="adicionarCarrinho('Produto 4', 89.90)">Adicionar ao Carrinho</button>
+  </div>
+
+  <div class="produto">
+    <img src="img/camiseta2.jpg" alt="Produto 5">
+    <p>Camiseta Essencial de chuva de código binário</p>
+    <p><strong>R$ 29,90</strong></p>
+    <button onclick="adicionarCarrinho('Produto 5', 129.90)">Adicionar ao Carrinho</button>
+  </div>
+
+  <div class="produto">
+    <img src="img/camiseta3.jpg" alt="Produto 6">
+    <p>Camisa Definição de Programador</p>
+    <p><strong>R$ 79,90</strong></p>
+    <button onclick="adicionarCarrinho('Produto 6', 179.90)">Adicionar ao Carrinho</button>
+  </div>
+</div>
+
+
+      <h2>Esse é o MELHOR NOTEBOOK GAMER com uma RTX 4050! Acer Predator Helios Neo! </h2>
+      <video controls>
+        <source src="midia/videoplayback.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo.
+      </video>
+
+      <h2>Áudio de propaganda</h2>
+      <audio controls>
+        <source src="midia/ElevenLabs_2025-06-05T00_06_27_Alice_pre_sp100_s50_sb75_se0_b_m2.mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+      </audio>
+
+      <footer>
+        <p>&copy; 2025 404 Not Found Store - Todos os direitos reservados.</p>
+      </footer>
+      <script src="js/home.js"></script>
+    </main>
+  </div>
+</body>
+</html>
